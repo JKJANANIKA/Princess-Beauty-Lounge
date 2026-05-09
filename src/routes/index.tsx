@@ -128,6 +128,18 @@ const REVIEWS = [
 ];
 
 function Home() {
+  const [form, setForm] = useState({ name: "", phone: "", service: "Bridal Makeup", note: "" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = `Hi Princess Beauty Lounge%2C%20I%27m%20${encodeURIComponent(
+      form.name,
+    )}%20(${encodeURIComponent(form.phone)}).%20I%27d%20like%20to%20book%20${encodeURIComponent(
+      form.service,
+    )}.%20${encodeURIComponent(form.note)}`;
+    window.open(`https://wa.me/919488477844?text=${text}`, "_blank");
+  };
+
   return (
     <>
       {/* HERO */}
