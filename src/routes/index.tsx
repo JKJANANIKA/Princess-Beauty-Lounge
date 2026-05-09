@@ -399,6 +399,239 @@ function Home() {
         </div>
       </section>
 
+      {/* WHY CHOOSE US */}
+      <section className="py-24 lg:py-32 bg-secondary/30">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs tracking-[0.25em] uppercase text-primary/70">Why Choose Us</span>
+            <h2 className="font-display text-4xl lg:text-5xl mt-3 mb-5">
+              A Promise of <span className="text-gradient-gold italic">Excellence</span>
+            </h2>
+            <div className="gold-divider mx-auto" />
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {WHY.map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="flex gap-5 p-7 rounded-2xl bg-card border border-border hover:border-gold/40 transition"
+              >
+                <div className="shrink-0 w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg mb-1.5">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs tracking-[0.25em] uppercase text-primary/70">Reviews</span>
+            <h2 className="font-display text-4xl lg:text-5xl mt-3 mb-5">
+              Loved by <span className="text-gradient-gold italic">Our Clients</span>
+            </h2>
+            <div className="flex items-center justify-center gap-3 mt-6">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                ))}
+              </div>
+              <span className="text-foreground/80 font-medium">4.9 / 5 on Google</span>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {REVIEWS.map((r) => (
+              <div
+                key={r.name}
+                className="relative p-8 rounded-2xl bg-card border border-border shadow-soft hover:border-gold/40 transition"
+              >
+                <Quote className="absolute top-6 right-6 w-8 h-8 text-gold/20" />
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                  ))}
+                </div>
+                <p className="text-foreground/80 leading-relaxed mb-6 italic">"{r.text}"</p>
+                <div className="flex items-center gap-3 pt-5 border-t border-border/60">
+                  <div className="w-10 h-10 rounded-full bg-blush flex items-center justify-center font-display text-primary">
+                    {r.name[0]}
+                  </div>
+                  <div>
+                    <div className="font-medium">{r.name}</div>
+                    <div className="text-xs text-muted-foreground">{r.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/reviews"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-gold transition"
+            >
+              Read all reviews <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="py-24 lg:py-32 bg-secondary/30">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-xs tracking-[0.25em] uppercase text-primary/70">Contact</span>
+            <h2 className="font-display text-4xl lg:text-5xl mt-3 mb-5">
+              Let's <span className="text-gradient-gold italic">Connect</span>
+            </h2>
+            <div className="gold-divider mx-auto" />
+          </div>
+          <div className="grid lg:grid-cols-5 gap-8">
+            <div className="lg:col-span-2 p-8 lg:p-10 rounded-2xl bg-card border border-border shadow-soft">
+              <h3 className="font-display text-2xl mb-2">Get in touch</h3>
+              <div className="gold-divider mb-7" />
+              <div className="space-y-7">
+                <div className="flex gap-4">
+                  <MapPin className="w-5 h-5 text-gold shrink-0 mt-1" />
+                  <div>
+                    <div className="font-medium mb-1">Address</div>
+                    <p className="text-sm text-muted-foreground">{ADDRESS}</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Phone className="w-5 h-5 text-gold shrink-0 mt-1" />
+                  <div>
+                    <div className="font-medium mb-1">Phone</div>
+                    <a href={`tel:${PHONE}`} className="text-sm text-muted-foreground hover:text-primary">
+                      {PHONE_DISPLAY}
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Mail className="w-5 h-5 text-gold shrink-0 mt-1" />
+                  <div>
+                    <div className="font-medium mb-1">Email</div>
+                    <a href={`mailto:${EMAIL}`} className="text-sm text-muted-foreground hover:text-primary">
+                      {EMAIL}
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Clock className="w-5 h-5 text-gold shrink-0 mt-1" />
+                  <div>
+                    <div className="font-medium mb-1">Business Hours</div>
+                    <p className="text-sm text-muted-foreground">
+                      Monday – Sunday<br />9:30 AM – 9:30 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <a
+                  href={`tel:${PHONE}`}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition text-sm"
+                >
+                  <Phone className="w-4 h-4" /> Call
+                </a>
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white hover:opacity-90 transition text-sm"
+                >
+                  <MessageCircle className="w-4 h-4" /> WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <form
+              onSubmit={handleSubmit}
+              className="lg:col-span-3 p-8 lg:p-10 rounded-2xl bg-gradient-blush border border-gold/20"
+            >
+              <h3 className="font-display text-2xl mb-2">Request an appointment</h3>
+              <p className="text-sm text-muted-foreground mb-7">
+                Fill in your details and we'll confirm via WhatsApp.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="text-xs uppercase tracking-wider text-foreground/70 mb-2 block">Your Name</label>
+                  <input
+                    required
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-gold focus:outline-none transition"
+                    placeholder="e.g. Priya"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs uppercase tracking-wider text-foreground/70 mb-2 block">Phone</label>
+                  <input
+                    required
+                    type="tel"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-gold focus:outline-none transition"
+                    placeholder="+91 ..."
+                  />
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="text-xs uppercase tracking-wider text-foreground/70 mb-2 block">Service</label>
+                  <select
+                    value={form.service}
+                    onChange={(e) => setForm({ ...form, service: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-gold focus:outline-none transition"
+                  >
+                    {[
+                      "Bridal Makeup",
+                      "Party / HD Makeup",
+                      "Hair Styling",
+                      "Hair Colour",
+                      "Facial & Skincare",
+                      "Threading & Waxing",
+                      "Manicure & Pedicure",
+                      "Mehendi",
+                    ].map((s) => (
+                      <option key={s}>{s}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="text-xs uppercase tracking-wider text-foreground/70 mb-2 block">Notes (optional)</label>
+                  <textarea
+                    rows={4}
+                    value={form.note}
+                    onChange={(e) => setForm({ ...form, note: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-gold focus:outline-none transition resize-none"
+                    placeholder="Preferred date & time, special requests..."
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="mt-6 inline-flex items-center gap-2 px-7 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition shadow-soft"
+              >
+                Send via WhatsApp <Send className="w-4 h-4" />
+              </button>
+            </form>
+          </div>
+
+          <div className="mt-10 rounded-2xl overflow-hidden shadow-soft border border-border">
+            <iframe
+              src={MAPS_EMBED}
+              title="Princess Beauty Lounge location"
+              className="w-full h-[400px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA BANNER */}
       <section className="py-20 bg-gradient-blush">
         <div className="mx-auto max-w-5xl px-5 lg:px-10 text-center">
