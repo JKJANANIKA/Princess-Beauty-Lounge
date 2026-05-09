@@ -10,6 +10,15 @@ import g7 from "@/assets/gallery/g7.png";
 import g8 from "@/assets/gallery/g8.png";
 import g9 from "@/assets/gallery/g9.png";
 import g10 from "@/assets/gallery/g10.png";
+import shop1 from "@/assets/gallery/shop1.png";
+import shop2 from "@/assets/gallery/shop2.png";
+import shop3 from "@/assets/gallery/shop3.png";
+
+const STUDIO = [
+  { src: shop1, alt: "Princess Beauty Lounge styling stations" },
+  { src: shop2, alt: "Princess Beauty Lounge salon chairs and mirrors" },
+  { src: shop3, alt: "Pedicure and spa corner" },
+];
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
