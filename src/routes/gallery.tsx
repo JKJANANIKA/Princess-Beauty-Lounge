@@ -1,11 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import gBridal from "@/assets/gallery-bridal.jpg";
-import gFacial from "@/assets/gallery-facial.jpg";
-import gHair from "@/assets/gallery-hair.jpg";
-import gNails from "@/assets/gallery-nails.jpg";
-import aboutImg from "@/assets/about-salon.jpg";
-import heroImg from "@/assets/hero-salon.jpg";
+import g1 from "@/assets/gallery/g1.png";
+import g2 from "@/assets/gallery/g2.png";
+import g3 from "@/assets/gallery/g3.png";
+import g4 from "@/assets/gallery/g4.png";
+import g5 from "@/assets/gallery/g5.png";
+import g6 from "@/assets/gallery/g6.png";
+import g7 from "@/assets/gallery/g7.png";
+import g8 from "@/assets/gallery/g8.png";
+import g9 from "@/assets/gallery/g9.png";
+import g10 from "@/assets/gallery/g10.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -17,19 +21,23 @@ export const Route = createFileRoute("/gallery")({
           "Browse our lookbook — bridal makeup, hair styling, facials, nail art and more from Princess Beauty Lounge, Nellikuppam.",
       },
       { property: "og:title", content: "Gallery — Princess Beauty Lounge" },
-      { property: "og:image", content: gBridal },
+      { property: "og:image", content: g2 },
     ],
   }),
   component: Gallery,
 });
 
 const ITEMS = [
-  { src: gBridal, alt: "Bridal makeup look", tag: "Bridal" },
-  { src: gHair, alt: "Hair styling and colour", tag: "Hair" },
-  { src: gFacial, alt: "Facial and skincare treatment", tag: "Skincare" },
-  { src: gNails, alt: "Nail art and manicure", tag: "Nails" },
-  { src: aboutImg, alt: "Salon studio", tag: "Studio" },
-  { src: heroImg, alt: "Lounge interior", tag: "Interior" },
+  { src: g1, alt: "Bridal makeup with artist", tag: "Bridal" },
+  { src: g2, alt: "Traditional red bridal look", tag: "Bridal" },
+  { src: g3, alt: "South Indian bridal hair styling", tag: "Hair" },
+  { src: g4, alt: "Eye makeup and jewellery detail", tag: "Makeup" },
+  { src: g5, alt: "Reception bridal look", tag: "Reception" },
+  { src: g6, alt: "Traditional saree bridal look", tag: "Traditional" },
+  { src: g7, alt: "Christian bridal makeup", tag: "Christian Bride" },
+  { src: g8, alt: "Engagement bridal look", tag: "Engagement" },
+  { src: g9, alt: "Soft glam bridal portrait", tag: "Bridal" },
+  { src: g10, alt: "Haldi floral jewellery look", tag: "Haldi" },
 ];
 
 function Gallery() {
