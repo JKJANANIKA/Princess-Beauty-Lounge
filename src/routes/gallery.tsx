@@ -84,6 +84,32 @@ function Gallery() {
           </div>
         </div>
       </section>
+
+      <section className="pb-24 lg:pb-32">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="text-center mb-12">
+            <span className="text-xs tracking-[0.25em] uppercase text-primary/70">
+              Inside The Studio
+            </span>
+            <h2 className="font-display text-4xl lg:text-5xl mt-3">
+              Our <span className="text-gradient-gold italic">Salon Space</span>
+            </h2>
+            <div className="gold-divider mx-auto mt-5" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+            {STUDIO.map((s) => (
+              <div key={s.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
