@@ -10,6 +10,15 @@ import g7 from "@/assets/gallery/g7.png";
 import g8 from "@/assets/gallery/g8.png";
 import g9 from "@/assets/gallery/g9.png";
 import g10 from "@/assets/gallery/g10.png";
+import shop1 from "@/assets/gallery/shop1.png";
+import shop2 from "@/assets/gallery/shop2.png";
+import shop3 from "@/assets/gallery/shop3.png";
+
+const STUDIO = [
+  { src: shop1, alt: "Princess Beauty Lounge styling stations" },
+  { src: shop2, alt: "Princess Beauty Lounge salon chairs and mirrors" },
+  { src: shop3, alt: "Pedicure and spa corner" },
+];
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -70,6 +79,32 @@ function Gallery() {
                 <span className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-background/90 text-xs tracking-widest uppercase text-primary opacity-0 group-hover:opacity-100 transition">
                   {g.tag}
                 </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-24 lg:pb-32">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="text-center mb-12">
+            <span className="text-xs tracking-[0.25em] uppercase text-primary/70">
+              Inside The Studio
+            </span>
+            <h2 className="font-display text-4xl lg:text-5xl mt-3">
+              Our <span className="text-gradient-gold italic">Salon Space</span>
+            </h2>
+            <div className="gold-divider mx-auto mt-5" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+            {STUDIO.map((s) => (
+              <div key={s.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
             ))}
           </div>

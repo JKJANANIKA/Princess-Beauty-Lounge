@@ -19,7 +19,16 @@ import gBridal from "@/assets/gallery-bridal.jpg";
 import gFacial from "@/assets/gallery-facial.jpg";
 import gHair from "@/assets/gallery-hair.jpg";
 import gNails from "@/assets/gallery-nails.jpg";
+import shop1 from "@/assets/gallery/shop1.png";
+import shop2 from "@/assets/gallery/shop2.png";
+import shop3 from "@/assets/gallery/shop3.png";
 import { PHONE, WHATSAPP } from "@/lib/site";
+
+const STUDIO = [
+  { src: shop1, alt: "Princess Beauty Lounge styling stations" },
+  { src: shop2, alt: "Princess Beauty Lounge salon chairs and mirrors" },
+  { src: shop3, alt: "Pedicure and spa corner" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -168,6 +177,41 @@ function Home() {
                   <p className="text-sm text-muted-foreground">{desc}</p>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INSIDE THE STUDIO */}
+      <section className="py-24 lg:py-32 bg-secondary/30">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+            <div className="max-w-xl">
+              <span className="text-xs tracking-[0.25em] uppercase text-primary/70">
+                Inside The Studio
+              </span>
+              <h2 className="font-display text-4xl lg:text-5xl mt-3">
+                A Calm, Hygienic <span className="text-gradient-gold italic">Sanctuary</span>
+              </h2>
+              <div className="gold-divider mt-5" />
+            </div>
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-gold transition"
+            >
+              See full gallery <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {STUDIO.map((s) => (
+              <div key={s.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             ))}
           </div>
         </div>
