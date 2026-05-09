@@ -210,6 +210,63 @@ function Home() {
         </div>
       </section>
 
+      {/* OUR STORY */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10 grid lg:grid-cols-2 gap-14 items-center">
+          <div className="relative order-2 lg:order-1">
+            <img
+              src={aboutImg}
+              alt="Beautician at Princess Beauty Lounge"
+              loading="lazy"
+              className="w-full h-[520px] object-cover rounded-2xl shadow-soft"
+            />
+            <div className="absolute -bottom-6 -right-6 lg:-right-10 bg-card border border-gold/30 rounded-2xl p-6 shadow-soft w-44">
+              <div className="text-4xl font-display text-gradient-gold">4.9★</div>
+              <div className="text-xs text-muted-foreground mt-1">Google Rated</div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <span className="text-xs tracking-[0.25em] uppercase text-primary/70">Our Story</span>
+            <h2 className="font-display text-4xl lg:text-5xl mt-3 mb-6 leading-tight">
+              Crafting confidence, <span className="text-gradient-gold italic">one client at a time</span>
+            </h2>
+            <div className="gold-divider mb-7" />
+            <p className="text-muted-foreground mb-5 leading-relaxed">
+              Tucked along the Main Road of Nellikuppam,{" "}
+              <strong className="text-foreground font-medium">Princess Beauty Lounge</strong> began
+              with a simple promise — to make every woman feel celebrated. From timeless bridal
+              makeup to soothing facials and signature hair styling, we deliver every service with
+              warmth, craft and care.
+            </p>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Our beauticians are trained in the latest techniques and we use only premium,
+              dermatologist-trusted products. The result? A salon that feels like a sanctuary — and
+              clients who keep coming back.
+            </p>
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                ["10+", "Years Trust"],
+                ["5K+", "Happy Clients"],
+                ["20+", "Services"],
+              ].map(([n, l]) => (
+                <div key={l} className="text-center p-4 rounded-xl bg-secondary/60">
+                  <div className="font-display text-2xl text-primary">{n}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{l}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-sm text-primary hover:text-gold transition"
+              >
+                Read full story <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED SERVICES */}
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 lg:px-10">
