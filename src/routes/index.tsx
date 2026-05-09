@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ChevronRight,
   Phone,
@@ -13,8 +14,17 @@ import {
   Award,
   Gem,
   ArrowRight,
+  Heart,
+  Users,
+  Quote,
+  MapPin,
+  Mail,
+  Clock,
+  MessageCircle,
+  Send,
 } from "lucide-react";
 import heroImg from "@/assets/hero-salon.jpg";
+import aboutImg from "@/assets/about-salon.jpg";
 import gBridal from "@/assets/gallery-bridal.jpg";
 import gFacial from "@/assets/gallery-facial.jpg";
 import gHair from "@/assets/gallery-hair.jpg";
@@ -22,7 +32,7 @@ import gNails from "@/assets/gallery-nails.jpg";
 import shop1 from "@/assets/gallery/shop1.png";
 import shop2 from "@/assets/gallery/shop2.png";
 import shop3 from "@/assets/gallery/shop3.png";
-import { PHONE, WHATSAPP } from "@/lib/site";
+import { ADDRESS, EMAIL, MAPS_EMBED, PHONE, PHONE_DISPLAY, WHATSAPP } from "@/lib/site";
 
 const STUDIO = [
   { src: shop1, alt: "Princess Beauty Lounge styling stations" },
