@@ -73,6 +73,60 @@ const QUICK_WHY = [
   { icon: Sparkles, label: "Personalised Care" },
 ];
 
+const WHY = [
+  { icon: Award, title: "Experienced Beauticians", desc: "Skilled artists with years of bridal & beauty expertise." },
+  { icon: ShieldCheck, title: "Hygienic Environment", desc: "Strict sanitisation and single-use tools for every client." },
+  { icon: Gem, title: "Premium Products", desc: "Trusted, salon-grade brands for safe, lasting results." },
+  { icon: Users, title: "Personalised Care", desc: "Consultations tailored to your skin, hair and style." },
+  { icon: Heart, title: "Customer Love", desc: "Rated 4.9★ on Google by our wonderful clients." },
+  { icon: Sparkles, title: "Affordable Luxury", desc: "Premium experience at honest, transparent pricing." },
+];
+
+const SERVICE_DETAILS = [
+  {
+    icon: Crown,
+    title: "Bridal & Engagement",
+    items: [
+      { name: "Signature Bridal Makeup", price: "From ₹8,000" },
+      { name: "Reception / Engagement Look", price: "From ₹5,000" },
+      { name: "Saree Draping & Hair", price: "From ₹1,500" },
+    ],
+  },
+  {
+    icon: Brush,
+    title: "Party & HD Makeup",
+    items: [
+      { name: "Party Makeup", price: "From ₹2,500" },
+      { name: "HD / Airbrush Makeup", price: "From ₹4,500" },
+      { name: "Pre-Bridal Trial", price: "From ₹2,000" },
+    ],
+  },
+  {
+    icon: Scissors,
+    title: "Hair Care & Styling",
+    items: [
+      { name: "Haircut & Blow Dry", price: "From ₹400" },
+      { name: "Hair Spa & Treatment", price: "From ₹800" },
+      { name: "Smoothing / Keratin", price: "From ₹3,500" },
+    ],
+  },
+  {
+    icon: Flower2,
+    title: "Facials & Skincare",
+    items: [
+      { name: "Gold / Pearl Facial", price: "From ₹1,200" },
+      { name: "Hydra Glow Facial", price: "From ₹1,500" },
+      { name: "Anti-Ageing Facial", price: "From ₹1,800" },
+    ],
+  },
+];
+
+const REVIEWS = [
+  { name: "Priya R.", role: "Bride · 2024", text: "Absolutely loved my bridal makeup! The team is so talented and made me feel like a princess on my big day." },
+  { name: "Divya S.", role: "Regular Client", text: "Best parlour in Nellikuppam. Very hygienic, friendly staff and the facial left my skin glowing for weeks." },
+  { name: "Lakshmi V.", role: "Hair Colour", text: "The hair styling and colour were beyond my expectations. Premium quality products and reasonable prices." },
+];
+
 function Home() {
   return (
     <>
