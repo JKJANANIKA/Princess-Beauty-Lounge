@@ -315,6 +315,55 @@ function Home() {
         </div>
       </section>
 
+      {/* SERVICE PRICING PREVIEW */}
+      <section className="py-24 lg:py-32 bg-secondary/30">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+            <div className="max-w-xl">
+              <span className="text-xs tracking-[0.25em] uppercase text-primary/70">Pricing</span>
+              <h2 className="font-display text-4xl lg:text-5xl mt-3">
+                Transparent <span className="text-gradient-gold italic">Service Menu</span>
+              </h2>
+              <div className="gold-divider mt-5" />
+            </div>
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-gold transition"
+            >
+              View full menu <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {SERVICE_DETAILS.map(({ icon: Icon, title, items }) => (
+              <div
+                key={title}
+                className="rounded-2xl bg-card border border-border hover:border-gold/40 p-8 shadow-soft transition"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-blush/70 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-2xl">{title}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {items.map((item) => (
+                    <li
+                      key={item.name}
+                      className="flex justify-between items-baseline gap-4 pb-3 border-b border-border/60 last:border-0 last:pb-0"
+                    >
+                      <span className="text-foreground/80">{item.name}</span>
+                      <span className="text-sm text-gold font-medium whitespace-nowrap">
+                        {item.price}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* INSIDE THE STUDIO */}
       <section className="py-24 lg:py-32 bg-secondary/30">
         <div className="mx-auto max-w-7xl px-5 lg:px-10">
