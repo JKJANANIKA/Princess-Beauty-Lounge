@@ -25,10 +25,10 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-salon.jpg";
 import aboutImg from "@/assets/about-salon.jpg";
-import gBridal from "@/assets/gallery-bridal.jpg";
-import gFacial from "@/assets/gallery-facial.jpg";
-import gHair from "@/assets/gallery-hair.jpg";
-import gNails from "@/assets/gallery-nails.jpg";
+import gBridal from "@/assets/gallery/g1.png";
+import gHair from "@/assets/gallery/g3.png";
+import gFacial from "@/assets/gallery/g6.png";
+import gNails from "@/assets/gallery/g8.png";
 import shop1 from "@/assets/gallery/shop1.png";
 import shop2 from "@/assets/gallery/shop2.png";
 import shop3 from "@/assets/gallery/shop3.png";
