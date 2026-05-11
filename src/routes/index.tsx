@@ -633,7 +633,7 @@ function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-20 bg-gradient-blush">
+      <section className="py-24 lg:py-32 bg-gradient-blush">
         <div className="mx-auto max-w-5xl px-5 lg:px-10 text-center">
           <Brush className="w-10 h-10 text-gold mx-auto mb-5" />
           <h2 className="font-display text-3xl lg:text-5xl mb-5">
